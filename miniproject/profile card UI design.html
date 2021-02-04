@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile card UI-Design</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			justify-content: center;
+			align-items: center;
+			display: flex;
+			background: #eee;
+		}
+		.card{
+			font-family: "Candara", sans-serif;
+			width: 340px;
+			overflow: hidden;
+			background: #fff;
+			border-radius: 10px;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+			display: flex;
+			flex-direction: column;
+		}
+		.card-image img{
+			width: 100%;
+			height: 160px;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			object-fit: cover;
+		}
+		.profile-image img{
+			z-index: 1;
+			width: 120px;
+			height: 120px;
+			position: relative;
+			margin-top: -75px;
+			display: block;
+			margin-left: auto;
+			border-radius: 100px;
+			border: 10px solid #fff;
+			transition-duration: 0.4s;
+			transition-property: transform;
+		}
+		.profile-image img:hover{
+			transform: scale(1.1);
+		}
+		.card-content h3{
+			font-size: 25px;
+			margin: 0;
+			text-align: center; 
+		}
+		.card-content p{
+			font-size: 16px;
+			text-align: justify;
+			padding: 0 20px 5px 20px;
+		}
+		.icons{
+			text-align: center;
+			padding-top: 5px;
+			padding-bottom: 30px;
+		}
+		.icons a{
+			text-decoration: none;
+			font-size: 20px;
+			color: #0abde3;
+			transition-duration: 0.4s;
+			padding: 0 14px;
+			transition-property: transform;
+		}
+		.icons a:hover{
+			color: #000;
+			transform: scale(1.5);
+		}
+
+	</style>
+</head>
+<body>
+	<div class="card">
+		<div class="card-image">
+			<img src="img3.jpg">
+		</div>
+		<div class="profile-image">
+			<img src="img1.jpg">
+		</div>
+		<div class="card-content">
+			<h3>Andrea Joe</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<div class="icons">
+			<a href="#"><i class="fab fa-facebook-f"></i></a>
+			<a href="#"><i class="fab fa-youtube"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+			<a href="#"><i class="fab fa-twitter"></i></a>
+			<a href="#"><i class="fab fa-whatsapp"></i></a>
+		</div>		
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>b/w img effect</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			background: #000;
+		}
+		img{
+			transition: 0.5s;
+			max-width: 400px;
+			margin: 0 10px;
+		}
+		img:hover{
+			filter: grayscale(1); <!--contrast(6)-->
+		}
+
+
+	</style>
+</head>
+<body>
+	<img src="img1.jpg">
+	<img src="img2.jpg">
+	<img src="img3.jpg">
+
+</body>
+</html>

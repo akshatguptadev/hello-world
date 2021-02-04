@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Text Animation</title>
+	<style type="text/css">
+		body{
+			background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)), url(img3.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+			color: #fff;
+			text-align: center;
+			width: 100vw;
+			font-weight: 700;
+			overflow: hidden;
+			font-family: 'Lato', sans-serif;
+		}
+		.content{
+			font-size: 4em;
+			margin: 40vh auto;
+			height: 20vh;
+			text-transform: uppercase;
+		}
+		.content span{
+			display: block;
+			font-size: 0.4em;
+			opacity: 0.8;
+		}
+		.content div{
+			position: fixed;
+			margin: 2vh 0;
+			opacity: 0;
+			width: 100vw;
+			animation: animate 32s linear infinite;
+		}
+		.content div:nth-child(2){
+			animation-delay: 4s;
+		}
+		.content div:nth-child(3){
+			animation-delay: 8s;
+		}
+		.content div:nth-child(4){
+			animation-delay: 12s;
+		}
+		.content div:nth-child(5){
+			animation-delay: 16s;
+		}
+		.content div:nth-child(6){
+			animation-delay: 20s;
+		}
+		.content div:nth-child(7){
+			animation-delay: 24s;
+		}
+		.content div:nth-child(8){
+			animation-delay: 28s;
+		}
+		@keyframes animate{
+			0%{
+				opacity: 0;
+				filter: blur(20px);
+				transform: scale(12);
+			}
+			3%{
+				opacity: 1;
+				filter: blur(0px);
+				transform: scale(1);
+			}
+			10%{
+				opacity: 1;
+				filter: blur(0px);
+				transform: scale(0.9);
+			}
+			13%{
+				opacity: 0;
+				filter: blur(10px);
+				transform: scale(0.1);
+			}
+			80%{
+				opacity: 0;
+			}
+			100%{
+				opacity: 0;
+			}
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div><span>Very</span>Cinematic</div>
+		<div>text animation<span>using html & css</span></div>
+		<div>Hello<span>Everybody</span></div>
+		<div><span>How's</span>the World</div>
+		<div><span>Very</span>Cinematic</div>
+		<div>text animation<span>using html & css</span></div>
+		<div>Hello<span>Everybody</span></div>
+		<div><span>How's</span>the World</div>
+	</div>
+
+</body>
+</html>
+

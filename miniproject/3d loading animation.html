@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3d Loading</title>
+	<style type="text/css">
+		.loader{
+			width: 70px;
+			height: 70px;
+			margin: 15em auto;
+			position: relative;
+			transform-style: preserve-3d;
+			animation: animate 4.59s ease-in-out infinite;
+		}
+		.loader:before, .loader:after{
+			content: "";
+			width: 50%;
+			height: 50px;
+			border-radius: 50%;
+			border: 15px solid #1b76ff;
+			position: absolute;
+			animation: animate_one 1.73s ease-in-out infinite both reverse;
+		}
+		.loader:after{
+			border-color: #0d47a1;
+			animation-delay: -0.86s;
+		}
+		@keyframes animate{
+			0%, 100%{
+				transform: rotateX(8.75deg) rotate(35deg);
+			}
+			50%{
+				transform: rotateX(35deg) rotate(180deg);
+		}
+		@keyframes animate_one{
+			0%, 100%{
+				transform: translateZ(25px) rotateX(14deg);
+			}
+			33%{
+				transform: translateZ(-25px) scale(0.4);
+			}
+			66%{
+				transform: translateZ(-25px);
+			}
+		}
+
+
+
+	</style>
+
+</head>
+<body>
+	<div class="loader"></div>
+
+</body>
+</html>

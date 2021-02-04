@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Text Changing Effect</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			background-image: url(img1.jpg);
+			-webkit-background-size: cover;
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			font-family: Poppins;
+			height: 100vh;
+		}
+		.wrapper{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.wrapper h2{
+			padding: 0;
+			margin: 0;
+			color: #fff;
+			text-shadow: 0 20px 0 rgba(0, 0, 0, 0.5);
+			font-size: 60px; 
+		}
+		.wrapper p{
+			color: #fff;
+			font-size: 18px;
+			margin: 0;
+			line-height: 35px;
+		}
+		.wrapper a{
+			background: crimson;
+			color: #fff;
+			text-decoration:  none;
+			padding: 10px 25px;
+			border-radius: 5px;
+			display: inline-block;
+			margin-top: 30px;
+		}
+		span:before{
+			content: "";
+			animation: animate infinite 8s;
+		}
+		@keyframes animate{
+			0%{ content: 'Programmer'; }
+			20%{ content: 'Developer'; }
+			40%{ content: 'Creative'; }
+			60%{ content: 'Thinker'; }
+			80%{ content: 'Minded'; }
+			100%{ content: 'Inquisitive'; }
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<h2>I am a<span></span></h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<a href="#">Contact me</a>
+	</div>
+
+</body>
+</html>

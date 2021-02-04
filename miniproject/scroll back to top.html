@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Back to Top</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;
+		}
+		html{
+			scroll-behavior: smooth;
+		}
+		section{
+			height: 75vh;
+			display: flex;
+			align-items: center;
+			font-size: 32px;
+			justify-content: center;
+			letter-spacing: 8px;
+		}
+		.section1{
+			background: #f0932b;
+		}
+		.section2{
+			background: #eb4d4b;
+		}
+		.section3{
+			background: #7ed6df;
+		}
+		.section4{
+			background: #22a6b3;
+		}
+		.to-top{
+			background: white;
+			position: fixed;
+			bottom: 16px;
+			right: 32px;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			font-size: 32px;
+			align-items: center;
+			justify-content: center;
+			display: flex;
+			color: #1f1f1f;
+			text-decoration: none;
+			opacity: 0;
+			pointer-events: none;
+			transition: all .4s; 
+		}
+		.to-top.active{
+			bottom: 32px;
+			pointer-events: auto;
+			opacity: 1;
+		}
+
+
+	</style>
+</head>
+<body>
+	<section class="section1">Section 1</section>
+	<section class="section2">Section 2</section>
+	<section class="section3">Section 3</section>
+	<section class="section4">Section 4</section>
+	<a href="#" class="to-top">
+		<i class="fas fa-chevron-up"></i>
+	</a>
+	<script type="text/javascript">
+		const toTop = document.querySelector('.to-top');
+		window.addEventListener('scroll', ()=>{
+			if(window.pageYOffset > 100){
+				toTop.classList.add('active');
+			}
+			else{
+				toTop.classList.remove('active');
+			}
+		});
+	</script>
+
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Generate Random Number</title>
+	<style type="text/css">
+		#number{
+			font-size: 90px;
+		}
+		#b{
+			width: 90px;
+			height: 55px;
+		}
+
+	</style>
+</head>
+<body>
+	<p id="number"></p>
+	<button id="b" onclick="random()">Get Number</button>
+
+	<script type="text/javascript">
+		function random(){
+			document.getElementById("number").innerHTML = Math.floor(Math.random() * 100);
+		}
+	</script>
+</body>
+</html>

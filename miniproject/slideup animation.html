@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slide up animaton</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.13/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<style type="text/css">
+		body{
+			background: #0f3037;
+			background: linear-gradient(to right, #2c5364, #203a43, #0f2027); 
+		}
+		.container{
+			display: flex;
+			justify-content: center;
+			margin-top: 12em;
+		}
+		.inner{
+			text-align: center;
+			color: whitesmoke;
+			overflow: hidden;
+			padding: 0.4em;
+		}
+		.inner > h1{
+			font-size: 3.5em; 
+		}
+		.inner > p{
+			font-size: 1.2em;
+		}
+		.inner > button{
+			margin-top: 2em;
+			padding: 1em 2.5em;
+			font-size: 1em;
+			border-radius: 4em;
+			border: none;
+			background: #f25757;
+			color: white;
+			animation: slide_up 2.4s ease;
+		}
+		@keyframes slide_up{
+			0%{
+				transform: translateY(250px);
+			}
+			100%{
+				transform: translateY(0); 
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="inner">
+		<h1>Signor Inquisitive</h1>
+		<p>This is Slide Up anim.</p>
+		<button class="btn btn-light">Slide Up</button>
+	</div>
+	</div>
+
+</body>
+</html>
+

@@ -1,0 +1,29 @@
+body {
+    transition: background-color 0.3s;
+    text-align: center;
+    font-family: sans-serif;
+    padding-top: 3em;
+}
+h1 {
+    font-weight: normal;
+}
+button {
+    padding: 1em;
+    font-size: 1em;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+button:hover {
+    opacity:.5;
+}
+body[data-light-mode="dark"] {
+    background-color: #000;
+    color: #eee;
+}
+body[data-light-mode="dark"] button {
+    background-color: #fff;
+    color: #000;
+}
