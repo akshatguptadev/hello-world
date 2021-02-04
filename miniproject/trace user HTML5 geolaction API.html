@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Geolocation API</title>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+	<h1>Tracing Your Location...</h1>
+	<button onclick="getLocation()">Get Location</button>
+	<!--Output will go here-->
+	<div id="output"></div>
+
+	<script type="text/javascript">
+		
+		var x=document.getElementById('output');
+
+		function getLocation() {
+			if(navigator.geolocation){
+				navigator.geolocation.getCurrentPosition(showPosition);
+			}
+
+			else{
+				x.innerHTML="Browser not Supporting";
+			}
+		}
+
+		function showPosition(position){
+			x.innerHTML="Latitude= "+position.coords.latitude;
+			x.innerHTML += "<br>"
+			x.innerHTML += "Longitude= "+position.coords.longitude;
+		}
+
+	</script>
+
+</body>
+</html>

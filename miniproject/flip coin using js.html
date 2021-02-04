@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flip Coin</title>
+</head>
+<body>
+
+	<form>
+		<table border="1">
+			<tr>
+				<td>Heads</td>
+				<td><input type="text" id="heads"></td>
+			</tr>
+			<tr>
+				<td>Tails</td>
+				<td><input type="text" id="tails"></td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" value="Flip Coin" onclick="toss()">
+				</td>
+			</tr>
+		</table>
+	</form>
+
+	<script type="text/javascript">
+		
+		var heads = 0;
+		var tails = 0;
+
+		function toss() {
+			var headsField = document.getElementById('heads');
+			var tailsField = document.getElementById('tails');
+			if (flip()) {
+				++heads;
+				headsField.value = heads;
+			}
+			else{
+				++tails;
+				tailsField.value = tails;
+			}
+		}
+		function flip() {
+			return Math.floor(Math.random()*2)==1
+		}
+
+	</script>
+
+</body>
+</html>

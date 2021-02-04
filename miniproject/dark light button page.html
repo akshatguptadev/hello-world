@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Dark and light theme button</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+<style>
+body{
+margin: 0;
+padding: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+input[type="checkbox"]{
+display: none;
+-webkit-appearance: none;
+visibility: hidden;
+}
+.check{
+position: relative;
+display: block;
+width: 40px;
+height: 20px;
+background: 17202a;
+cursor: pointer;
+border-radius: 20px;
+overflow: hidden;
+transition: ease-in 0.5s;
+border-style: #fff;
+}
+.check:before{
+content: '';
+top: 2px;
+left: 2px;
+width: 16px;
+height: 16px; 
+position: absolute;
+background: #fff;
+border-radius: 50%;
+transition: 0.5s;
+}
+.check:after{
+content: '';
+top: 2px;
+left: 2px;
+width: 16px;
+height: 16px; 
+position: absolute;
+background: #17202a;
+border-radius: 50%;
+transition: 0.5s;
+transform: translateX(50px);
+}
+input[type="checkbox"]:checked~.check{
+background: #fff;
+box-shadow: 0 0 0 1200px #17202a;
+}
+
+input[type="checkbox"]:checked~.check:before{
+transform: translatex(-50%);
+}
+input[type="checkbox"]:checked~.check:after{
+transform: translateX(0px);
+}
+
+</style>
+</head>
+<body>
+<label>
+<input type="checkbox">
+<span class="check">Click</span>
+</label>
+</body>
+</html>

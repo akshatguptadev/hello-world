@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>creating Captcha</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			background: #fafafa;
+		}
+		.heading{
+			position: relative;
+			height: auto;
+			width: 80%;
+			background: #017bf5;
+			color: #fff;
+			font-size: 48px;
+			border: 5px solid rgba(0, 0, 255, 0.5);
+			left: 50%;
+			font-family: sans-serif;
+			transform: translateX(-50%);
+			margin: 3% 0;
+		}
+		input[type="text"]{
+			position: relative;
+			height: 100px;
+			width: 200px;
+			background: #fff;
+			border: 1px solid rgba(0, 0, 0, 0.5);
+			text-align: center;
+			left: 50%;
+			transform: translateX(-50%);
+			color: #017bf5;
+			outline: none;
+			font-size: 35px;
+		}
+		input[type="button"]{
+			position: absolute;
+			outline: none;
+			height: 36px;
+			width: 200px;
+			background: #017bf5;
+			border: 1px solid #017fb5;
+			text-align: center;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			color: #fff;
+			cursor: pointer;
+			transition: 0.5s ease-in-out;
+		}
+		input[type="button"]:hover{
+			color: #017fb5; 
+			background: #fff;
+		}
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<h1>GENERATE CAPTCHA</h1>
+	<form name="f1">
+		<input type="text" name="t1" value="" readonly>
+		<input type="button" name="b1" value="GENERATE CAPTCHA" onclick="fun1()">
+	</form>
+
+	<script type="text/javascript">
+		function fun1() {
+			var no = "1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+			var x = no[Math.floor(Math.random()*no.length)];
+
+			for (var i = 0; i < 6; i++) {
+				x = x+no[Math.floor(Math.random()*no.length)];
+			}
+			f1.t1.value = x;
+		}
+		window.onload=fun1;
+	</script>
+
+</body>
+</html>
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loading text Anim</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: consolas;
+		}
+		body{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			background: #000;
+		}
+		h2{
+			color: #000;
+			font-size: 6em;
+			display: flex;
+		}
+		h2 span{
+			animation: animate 4s linear infinite;
+		}
+		@keyframes animate{
+			0%, 100%{
+				color: #fff;
+				filter: blur(2px);
+				text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff, 0 0 300px #00b3ff;
+			}
+			25%, 75%{
+				color: #000;
+				filter: blur(0px);
+				text-shadow: none;
+			}
+		}
+		h2 span:nth-of-type(1){
+			animation-delay: 0s;
+		}
+		h2 span:nth-of-type(2){
+			animation-delay: 0.1s;
+		}
+		h2 span:nth-of-type(3){
+			animation-delay: 0.2s;
+		}
+		h2 span:nth-of-type(4){
+			animation-delay: 0.3s;
+		}
+		h2 span:nth-of-type(5){
+			animation-delay: 0.4s;
+		}
+		h2 span:nth-of-type(6){
+			animation-delay: 0.5s;
+		}
+		h2 span:nth-of-type(7){
+			animation-delay: 0.6s;
+		}
+		h2 span:nth-of-type(8){
+			animation-delay: 0.7s;
+		}
+
+	</style>
+</head>
+<body>
+	<h2>
+		<span>L</span>
+		<span>o</span>
+		<span>a</span>
+		<span>d</span>
+		<span>i</span>
+		<span>n</span>
+		<span>g</span>
+		<span>...</span>
+	</h2>
+
+</body>
+</html>

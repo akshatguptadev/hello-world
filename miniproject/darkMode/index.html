@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <script>
+      var app = document.getElementsByTagName("BODY")[0];
+      if (localStorage.lightMode == "dark") {
+        app.setAttribute("data-light-mode", "dark");
+      }
+    </script>
+
+    <h1>
+      Toggle Dark Mode with <br />
+      Javascript & Local Storage
+    </h1>
+
+    <button onclick="toggle_light_mode()">
+      Toggle Light Mode
+    </button>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dice Rolling</title>
+
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		h1{
+			margin-left: 30%;
+			color: red;
+			text-decoration: underline;
+		}
+		button{
+			float: mid;
+			background-color: #000;
+			color: #fff;
+
+		}
+		h2{
+			clear: left;
+			color: green;
+			align-items: center;
+			justify-content: center;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Dice Rolling Game!!!</h1>
+	<div id="die1" class="dice">0</div>
+	<div id="die2" class="dice">0</div>
+	<button onclick="rollDice()">Roll Dice</button>
+	<h2 id="status"></h2>
+
+	<script type="text/javascript">
+		function rollDice(){
+			var die1=document.getElementById('die1');
+			var die2=document.getElementById('die2');
+			var status=document.getElementById('status');
+
+			var d1=Math.floor(Math.random()*6)+1;
+			var d2=Math.floor(Math.random()*6)+1;
+			var diceTotal=d1+d2;
+
+			die1.innerHTML=d1;
+			die2.innerHTML=d2;
+
+			status.innerHTML="You rolled "+diceTotal+" .";
+			if (d1==d2) {
+				status.innerHTML += "Doubles! You get a free turn!!";
+			}
+		}
+
+
+	</script>
+</body>
+</html>
+

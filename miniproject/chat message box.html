@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>Dark and light theme button</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial;
+}
+.container{
+height: 100vh;
+width: 100%;
+background-color: #000; 
+}
+h2{
+position: absolute;
+left: 50%;
+top: 25%;
+transform: translate(-50%);
+font-size: 50px;
+color: rgba(255, 255, 255, 1);
+font-family: Comic Sans MS; 
+}
+.open-button{
+background-color: rgba(255, 255, 255, 0.8);
+color(0, 0, 0, 0.7);
+padding: 16px 20px;
+bottom: 23px;
+bottom: 23px;
+right: 28px;
+width: 280px; 
+border: none;
+cursor: pointer;
+position: fixed;
+opacity: 0.8;
+}
+.chat-popup{
+display: none;
+position: fixed;
+bottom: 0;
+right: 15px;
+border: 3px solid #f1f1f1;
+z-index: 9; 
+}
+.form-container{
+max-width: 300px;
+padding: 10px;
+background-color: white;
+}
+.form-container textarea{
+width: 100%;
+padding: 15px;
+margin: 5px 0 22px 0;
+border: none;
+background: #f1f1f1;
+min-height: 200px;
+}
+.form-container .btn{
+color: rgba(0, 0, 0, 0.8);
+border: none;
+background-color: #659dbd;
+padding: 16px;
+width: 100%;
+cursor: pointer;
+margin-bottom: 10px;
+opacity: 0.8;
+}
+.form-container .cancel{
+background-color: rgba(0, 0, 0, 0.7);
+color: rgba(255, 255, 255, 0.8);
+}
+.form-container .btn:hover,
+.open-button:hover{
+opacity: 1;
+}
+
+</style>
+</head>
+<body>
+<section class="container">
+<h2>Popup chat window</h2>
+<button class="open-button" onclick="openform()" >Chat</button>
+<div class="chat-popup" id="myform">
+<form action="" class="form-container">
+<h1>Chat</h1>
+<label for="msg">
+<b>Message</b>
+</label>
+<textarea placeholder="Type message here..." name="msg" required></textarea>
+<button type="submit" class="btn-cancel" onclick="closeform()" >Close</button>
+</form>
+</div>
+</section>
+<script>
+function openform(){
+document.getElementById("myform").style.display = "block";
+}
+function closeform(){
+document.getElementById("myform").style.display = "block";
+}
+</script>
+</body>
+</html>
+

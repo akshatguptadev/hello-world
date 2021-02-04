@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text typing automated-1</title>
+  <style type="text/css">
+    h1 {
+      overflow: hidden;
+      white-space: nowrap;
+      font-family: consolas;
+      border-right: 4px solid black;
+      width: 22ch;
+      animation: type 3s steps(22);
+      /* ("...msg...".length) in console
+      it will show the indx and length of all characters */
+    }
+@keyframes type {
+      0% {
+        width: 0ch;
+      }
+      100% {
+        width: 22ch;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Text Typing Animation.</h1>
+
+</body>
+</html>
